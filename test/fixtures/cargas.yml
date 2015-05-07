@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  potencia: 1
+  quantidade: 1
+  data: 2015-05-07 10:56:27
+  empresa_id: 1
+
+two:
+  tipo: MyString
+  potencia: 1
+  quantidade: 1
+  data: 2015-05-07 10:56:27
+  empresa_id: 1

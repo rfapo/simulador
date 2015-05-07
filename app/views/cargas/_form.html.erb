@@ -1,0 +1,37 @@
+<%= form_for(@carga) do |f| %>
+  <% if @carga.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carga.errors.count, "error") %> prohibited this carga from being saved:</h2>
+
+      <ul>
+      <% @carga.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :potencia %><br>
+    <%= f.number_field :potencia %>
+  </div>
+  <div class="field">
+    <%= f.label :quantidade %><br>
+    <%= f.number_field :quantidade %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.datetime_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :empresa_id %><br>
+    <%= f.number_field :empresa_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cargas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Potencia</th>
+      <th>Quantidade</th>
+      <th>Data</th>
+      <th>Empresa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cargas.each do |carga| %>
+      <tr>
+        <td><%= carga.tipo %></td>
+        <td><%= carga.potencia %></td>
+        <td><%= carga.quantidade %></td>
+        <td><%= carga.data %></td>
+        <td><%= carga.empresa_id %></td>
+        <td><%= link_to 'Show', carga %></td>
+        <td><%= link_to 'Edit', edit_carga_path(carga) %></td>
+        <td><%= link_to 'Destroy', carga, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carga', new_carga_path %>

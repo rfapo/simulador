@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @carga.tipo %>
+</p>
+
+<p>
+  <strong>Potencia:</strong>
+  <%= @carga.potencia %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @carga.quantidade %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @carga.data %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @carga.empresa_id %>
+</p>
+
+<%= link_to 'Edit', edit_carga_path(@carga) %> |
+<%= link_to 'Back', cargas_path %>
