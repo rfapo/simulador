@@ -1,0 +1,29 @@
+<%= form_for(@parametro) do |f| %>
+  <% if @parametro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parametro.errors.count, "error") %> prohibited this parametro from being saved:</h2>
+
+      <ul>
+      <% @parametro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tarifa %><br>
+    <%= f.text_field :tarifa %>
+  </div>
+  <div class="field">
+    <%= f.label :demanda %><br>
+    <%= f.number_field :demanda %>
+  </div>
+  <div class="field">
+    <%= f.label :empresa_id %><br>
+    <%= f.number_field :empresa_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
